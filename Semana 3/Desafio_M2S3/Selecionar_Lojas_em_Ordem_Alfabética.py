@@ -4,7 +4,7 @@ conexao = sqlite3.connect('Loja.db')
 
 cursor = conexao.cursor()
 
-resultados = cursor.execute('select * from loja where endereco >= "Rua Principal" order by nome asc')
+resultados = cursor.execute('select * from loja where endereco like "%Rua Principal%" order by nome asc')
 
 for resultado in resultados:
     print(resultado)
